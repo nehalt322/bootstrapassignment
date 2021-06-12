@@ -155,5 +155,15 @@ body {
       position: relative;
     }
     .sidebar a {float: none;}
+    .wrapper .sidebar .card-container {
+        display: block;
+        left: 0;
+        right: 0;
+        margin-left: 10%;
+        margin-right: 10%;
+        position: relative;
+        bottom: 5%;
+        margin-top: 50px;
+    }
     .main-content {margin-left: 0;}
   }
