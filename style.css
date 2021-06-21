@@ -70,7 +70,7 @@ body {
     margin-right: 10%;
     position: absolute; 
     margin-top: 20px;
-    bottom: 5%;
+    bottom: 1%;
 }
 
 .card-container .card {
@@ -98,6 +98,9 @@ body {
 
 .main-content .container-header .header-row ,.image-row,.day-row{
     margin: 0;
+}
+.main-content .container-header .header-row{
+    justify-content: space-between;
 }
 
 .col-search,.col-profile,.col-img{
