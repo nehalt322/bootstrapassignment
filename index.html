@@ -31,30 +31,36 @@
   <!-- Side Bar -->
   <div class="wrapper d-flex">
     <div class="sidebar">
-      <h2 class="metrologue">METEOROLOG</h2>
+      <div class="sidebar-header">Meteorolog</div>
+      <hr />
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="#">
-            DashBoard <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#"><i class="fas fa-columns"></i> DashBoard</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Statistics</a>
+          <a class="nav-link" href="#"><i class="fas fa-chart-bar"></i> Statistics</a>
         </li>
         <li class="nav-item">
 
-          <a class="nav-link" href="#">Map</a>
+          <a class="nav-link" href="#"><i class="fas fa-map-marker-alt"></i> Map</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Calendar</a>
+          <a class="nav-link" href="#"><i class="fas fa-calendar-alt"></i>Calendar</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Setting</a>
+          <a class="nav-link" href="#"><i class="fas fa-cog"></i>Setting</a>
         </li>
       </ul>
+
+      <hr />
 
       <div class="card-container">
         <div class="card">
           <div class="card-body">
+            <div class="card-header-details">
+              <i class="fas fa-cloud-meatball"></i>
+              <div class="header-details">Today</div>
+            </div>
             <h5 class="card-title">Today</h5>
             <h6 class="card-subtitle mb-2">11:44</h6>
             <h6 class="card-subtitle mb-2text-muted">Mon,11 January</h6>
@@ -70,41 +76,72 @@
 
   <div class="main-content">
 
-    <nav class="navbar navbar-light bg-light">
-      <form class="form-inline">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </nav>
-    <h1 class="heading">Weather Report</h1>
+    <div class="container-fluid container-header">
+      <div class="row header-row">
+        <div class="col-sm-8 col-search">
 
-    <div class="row">
-      <div class="col-sm-12 col-lg">
-        <img class="img-fluid img_class" src="chicago.jpg">
-        <h3 class="city_name">Amsterdam</h3>
-      </div>
-      <div class="col-sm-12 col-lg">
-        <img class="img-fluid img_class" src="chicago.jpg">
-        <h3 class="city_name">Amsterdam</h3>
-      </div>
+          <form>
+            <div class="form-group form-search">
+              <div class="input-group-prepend border-0">
+                <button id="button-Search" type="button" class="btn btn-link text-info btn-search"><i
+                    class="fa fa-search"></i></button>
+              </div>
+              <input type="text" class="form-control search-box" id="formGroupSearchInput" placeholder="Search">
+            </div>
+          </form>
 
-      <div class="col-sm-12 col-lg">
-        <img class="img-fluid img_class" src="chicago.jpg">
-        <h3 class="city_name">Amsterdam</h3>
-      </div>
-      <div class="col-sm-12 col-lg">
-        <img class="img-fluid img_class" src="chicago.jpg">
-        <h3 class="city_name">Amsterdam</h3>
-      </div>
-      <div class="col-sm-12 col-lg">
-        <img class="img-fluid img_class" src="chicago.jpg">
-        <h3 class="city_name">Amsterdam</h3>
+        </div>
+
+        <div class="col"></div>
+
+        <div class="col-sm-2 col-profile">
+          <div class="profile">
+            <div class="bell-icon">
+              <div class="bell-container">
+                <button id="button-bell" type="button" class="btn bell-button"><i class="fas fa-bell"></i></button>
+              </div>
+            </div>
+            <img src="profile.jpg" class="img rounded-circle">
+            <div class="user-name">Willam Jacobs</div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <h2 class="heading">London</h2>
-    <div class="row">
-      <div class="col-sm-6 col-lg">
+
+
+
+    <div class="heading">Weather Forecast</div>
+
+    <!-- <h1 class="heading">Weather Report</h1> -->
+
+    <div class="row image-row">
+      <div class="col-sm-12 col-lg-2 col-img">
+        <img class="img-fluid img_class" src="chicago.jpg">
+        <h3 class="city_name">Chicago</h3>
+      </div>
+      <div class="col-sm-12 col-lg-2 col-img">
+        <img class="img-fluid img_class" src="amsterdam.jpg">
+        <h3 class="city_name">Amsterdam</h3>
+      </div>
+
+      <div class="col-sm-12 col-lg-2 col-img">
+        <img class="img-fluid img_class" src="london.jpg">
+        <h3 class="city_name">London</h3>
+      </div>
+      <div class="col-sm-12 col-lg-2 col-img">
+        <img class="img-fluid img_class" src="paris.jpg">
+        <h3 class="city_name">Paris</h3>
+      </div>
+      <div class="col-sm-12 col-lg-2 col-img">
+        <img class="img-fluid img_class" src="budapest.jpg">
+        <h3 class="city_name">Budapest</h3>
+      </div>
+    </div>
+
+    <div class="heading">London</div>
+    <div class="row day-row">
+      <div class="col-sm-6 col-lg col-img">
         <div class="square">
           <img src="sun.jpg" class="img-fluid sun">
           <h5>-5/+4</h5>
@@ -112,49 +149,65 @@
         </div>
       </div>
 
-      <div class="col-sm-6 col-lg">
+      <div class="col-sm-6 col-lg col-img">
         <div class="square">
           <img src="sun.jpg" class="img-fluid sun">
           <h5>-5/+4</h5>
           <h4> 11,Mon</h4>
         </div>
       </div>
-      <div class="col-sm-6 col-lg">
+      <div class="col-sm-6 col-lg col-img">
         <div class="square">
           <img src="sun.jpg" class="img-fluid sun">
           <h5>-5/+4</h5>
           <h4> 11,Mon</h4>
         </div>
       </div>
-      <div class="col-sm-6 col-lg">
+      <div class="col-sm-6 col-lg col-img">
         <div class="square">
           <img src="sun.jpg" class="img-fluid sun">
           <h5>-5/+4</h5>
           <h4> 11,Mon</h4>
         </div>
       </div>
-      <div class="col-sm-6 col-lg">
+      <div class="col-sm-6 col-lg col-img">
         <div class="square">
           <img src="sun.jpg" class="img-fluid sun">
           <h5>-5/+4</h5>
           <h4> 11,Mon</h4>
         </div>
       </div>
-      <div class="col-sm-6 col-lg">
+      <div class="col-sm-6 col-lg col-img">
         <div class="square">
           <img src="sun.jpg" class="img-fluid sun">
           <h5>-5/+4</h5>
           <h4> 11,Mon</h4>
         </div>
       </div>
-      <div class="col-sm-6 col-lg">
+      <div class="col-sm-6 col-lg col-img">
         <div class="square">
           <img src="sun.jpg" class="img-fluid sun">
           <h5>-5/+4</h5>
           <h4> 11,Mon</h4>
         </div>
       </div>
-      <div class="col-sm-6 col-lg">
+      <div class="col-sm-6 col-lg col-img">
+        <div class="square">
+          <img src="sun.jpg" class="img-fluid sun">
+          <h5>-5/+4</h5>
+          <h4> 11,Mon</h4>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg col-img">
+        <div class="square">
+          <img src="sun.jpg" class="img-fluid sun">
+          <h5>-5/+4</h5>
+          <h4> 11,Mon</h4>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg col-img">
         <div class="square">
           <img src="sun.jpg" class="img-fluid sun">
           <h5>-5/+4</h5>
